@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light shup">
+        <div class="container-fluid">
+          <img src="../download.png" alt="" class="logo">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 <img class="logout" src="../assets/png-transparent-login-computer-icons-avatar-icon-monochrome-black-silhouette.png" alt="">
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Profile View</a></li>
+                  
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Log Out</a></li>
+                </ul>
+              </li>
+              
+          
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">My Network</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Jobs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Messaging</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Notifications</a>
+              </li>
+              
+           
+          </div>
+        </div>
+      </nav>
+
+      <!-- ----------------------------main---------------------------- -->
+
+      <div class="row" style="width: 100%;">
+        <div class="col boxStyle1 ">
+            <img src="../assets/png-transparent-login-computer-icons-avatar-icon-monochrome-black-silhouette.png" class="profilePicture" alt="">
+            <h5 class="des" id="userName">UserName</h5>
+            <h5 class="des" id="emailAddress">User Email</h5>
+          
+        </div>
+        <div class="col-6 boxStyle2">
+            <div class="postInputArea">
+                <img src="../assets/png-transparent-login-computer-icons-avatar-icon-monochrome-black-silhouette.png" class="profilePicture" alt="">
+                <input onclick="show()" id="postInputBox" type="text" class="postInput">
+                <button class="post">Post</button>
+            </div>
+            <div class="post-opt">
+              <div class="posting">
+                <img onclick="show()"  class="post-img" src="../assets/image.png" alt="">
+                <img onclick="show()" class="post-img"  src="../assets/note.png" alt="">
+                <img onclick="show()" class="post-img"  src="../assets/planner.png" alt="">
+                <img onclick="show()" class="post-img"  src="../assets/video.png" alt="">
+              </div>
+              <hr>
+            </div>
+
+       
+
+            <div class="postArea" id="postAreaId">
+              <h1 class="FEED">FEED</h1>
+                <!-- <div class="post my-5 bg-light rounded">
+                  
+                    <div class="authorDetails d-flex ">
+
+                        <img src="../assets/avatarDummy.png" alt="" class="profilePicture">
+                        <div>
+                            <h4 style="font-size: 15px;">UserName</h4>
+                            <h5 style="font-size: 12px;">User Description</h5>
+                            <h6 style="font-size: 10px;">10h</h6>
+                        </div>
+                    </div>
+                    <div class="postData">
+                        <h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quae praesentium
+                            laboriosam. Ab, vel architecto ea illo eos soluta quam?
+                        </h4>
+                        <img src="../assets/dummyPostImage.jpg" alt="" id="post-pic" class="img-fluid">
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+
+      
+
+
+        <div class="col boxStyle3">
+            3 of 3
+        </div>
+    </div>
+</div>
+
+  <!-- ------------------------------post-modal------------------------ -->
+  <div class="signup remove" id="signupwwwww" >
+    <div class="top">
+       <div>
+        <h2>Create a Post</h2>
+       
+       </div>
+       <img src="../assets/zgulV2zGm8t.png" alt="" onclick="closeFunc()">
+    </div>
+    <hr>
+    <form onsubmit="return false">
+        <div class="signup-body">
+            
+            <div class="bottom">
+                <input id="des" type="text" placeholder="Enter post description">
+                <label for="input-pic"> Upload Image </label>
+                <input class="shap" type="file" accept="image/jpeg , img/png , img/jpg" placeholder="select photo to share" id="input-pic">
+                <button onclick="uploadHandler()" class="p-btn">Post</button>
+              
+            </div>
+
+           
+
+           
+        </div>
+
+    
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="home.js"></script>
+</body>
+</html>
